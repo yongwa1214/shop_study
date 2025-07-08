@@ -1,6 +1,19 @@
 <script setup>
+import { getItems } from '@/services/itemService'
+import { onMounted } from 'vue';
+
+console.log('안녕')
+
+onMounted(async()=>{
+  const res = await getItems();
+  
+  console.log("res.data:", res.data);
+
+})
 
 </script>
+
+
 
 <template>
   <div class="container">
